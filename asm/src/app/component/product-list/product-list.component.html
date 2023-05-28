@@ -1,0 +1,21 @@
+<a href="product/add">them san pham</a>
+<table>
+    <thead>
+        <tr>
+            <th>Stt</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td><a href="product/detail/{{product.id}}">{{product.name}}</a></td>
+            <td>{{product.price}}</td>
+            <td><button (click)="removeitem(product.id)"> xoa</button></td>
+            <td><button><a href="product/edit/{{product.id}}">Edit</a></button></td>
+
+        </tr>
+    </tbody>
+</table>
